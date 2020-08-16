@@ -12,6 +12,8 @@ public class LoginActivity extends AppCompatActivity {
     private Button userlogin_btn;
     private TextView forget_password;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,5 +30,15 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        userlogin_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent=new Intent(LoginActivity.this,HomeActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
